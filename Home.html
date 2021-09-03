@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <LINK rel="stylesheet" href="C:\Users\Rishika\Documents\Sem 6 WT Lab\Exp3.css">
+    <title> Homepage </title>
+    <script language="JavaScript">
+        function show_value(x)
+        {   document.f1.Age.value = x;
+        }
+
+        function increment()
+        {   document.f1.age.value = parseInt(document.f1.age.value) + 1;
+            show_value(document.f1.age.value);
+        }
+        function decrement()
+        {   document.f1.age.value = parseInt(document.f1.age.value) - 1;
+            show_value(document.f1.age.value);
+        }
+
+        function Model()
+        {   
+
+        }
+    </script>
+</head>
+<body>
+    <CENTER>
+        <form name="f1" action="" method="POST">
+            <FONT face="Monotype Corsiva" size="5">
+                Car Name <!--String-->
+                <input type="text" name="name" required="required" placeholder="Car Model Name" /> <br /> <br />
+
+                Fuel Type: <!--Category--> <br />
+                <font face="Comic Sans MS" size="4.5">
+                    <input type="radio" name="fuel" required="required" value="Petrol" /> Petrol <br />
+                    <input type="radio" name="fuel" required="required" value="Diesel" /> Diesel <br /> <br />
+                </font>
+
+                Seller Type: <!--Category--> <br />
+                <font face="Comic Sans MS" size="4.5">
+                    <input type="radio" name="seller" required="required" value="Individual" /> Individual <br />
+                    <input type="radio" name="seller" required="required" value="Dealer" /> Dealer <br /> <br />
+                </font>
+
+                Transmission Mode: <!--Category--> <br />
+                <font face="Comic Sans MS" size="4.5">
+                    <input type="radio" name="tran" required="required" value="Manual" /> Manual <br />
+                    <input type="radio" name="tran" required="required" value="Automatic" /> Automatic <br /> <br />
+                </font>
+
+                Owner: <!--Category--> <br />
+                <font face="Comic Sans MS" size="4.5">
+                    <input type="radio" name="owner" required="required" value="First" /> First <br />
+                    <input type="radio" name="owner" required="required" value="Second" /> Second <br />
+                    <input type="radio" name="owner" required="required" value="Third" /> Third <br /> <br />
+                </font>
+
+                Car Age <!--Int-->
+                <span id="age" style="color:black;">
+                    <div class="slidecontainer">
+                        <input type="button" value="-" onClick="decrement()"> 0
+                        <input type="range" width="400" min="0" max="20" step="1" id="age" name="age" required="required" onchange="show_value(this.value)">
+                        20 <input type="button" value="+" onClick="increment()">
+                           <input type="text" size="2" name="Age" placeholder="Age" />
+                    </div>
+                </span> <br /> <br />
+                <!--input type="text" name="age" required="required" placeholder="Present Year - Year of Purchase" /> <br /> <br /-->
+                
+                Odometer Reading <!--Int-->
+                <input type="text" name="km" required="required" placeholder="Kilometers Driven in car" /> <br /> <br />
+
+                Present Price <!--Float-->
+                <input type="text" name="cp" required="required" placeholder="Current Market Value" /> <br /> <br />
+
+                <input type="submit" OnClick="Model()" /> <br /> <br /> <br /> <br />
+
+                Selling Price <!--(Float) DEPENDENT VARIABLE-->
+                <input type="text" name="sp" placeholder="Estimated Selling Price of your car" /> <br /> <br />
+
+
+            </FONT>
+        </form>
+    </CENTER>
+
+
+
+
+
+
+
+
+</body>
+</html>
